@@ -1,0 +1,50 @@
+.entrada-container {
+  max-width: 600px;
+  margin: 40px auto;
+  background-color: #fff;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.entrada-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.entrada-form input {
+  padding: 10px 14px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  background-color: #f5f7fa;
+  transition: border 0.2s;
+}
+
+.entrada-form input:focus {
+  border-color: #007bff;
+}
+
+.entrada-form button {
+  padding: 12px;
+  font-size: 16px;
+  background-color: #ad1ed1;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+
+.entrada-form button:hover {
+  background-color: #940bb3;
+}
+
+.lista-estoque ul {
+  list-style: none;
+  padding: 0;
+}

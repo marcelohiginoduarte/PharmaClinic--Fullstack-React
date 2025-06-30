@@ -1,0 +1,173 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f7fa;
+  margin: 0;
+}
+
+.estoque-page {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.estoque-titulo {
+  font-size: 28px;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+
+.estoque-tabela-wrapper {
+  overflow-x: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  background-color: #fff;
+}
+
+.estoque-tabela {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.estoque-tabela th,
+.estoque-tabela td {
+  padding: 16px;
+  text-align: left;
+  font-size: 16px;
+}
+
+.estoque-tabela th {
+  background-color: #ad1ed1;
+  color: #fff;
+}
+
+.estoque-tabela tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.estoque-tabela tr:hover {
+  background-color: #e0f0ff;
+  transition: 0.2s;
+  font-weight: bold;
+}
+
+.estoque-topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.paginacao {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.paginacao button {
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid #007bff;
+  background-color: white;
+  color: #007bff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.paginacao button:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.pagina-ativa {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+}
+
+.estoque-busca {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #f1f1f1;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  max-width: 400px;
+  flex: 1;
+}
+
+.estoque-busca input {
+  border: none;
+  background: transparent;
+  flex: 1;
+  font-size: 16px;
+  outline: none;
+}
+
+.icone-busca {
+  color: #555;
+  font-size: 18px;
+}
+
+.opcoes-container {
+  position: relative;
+}
+
+.botao-opcoes {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #007bff;
+  font-size: 14px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.botao-opcoes:hover {
+  background-color: rgba(0, 123, 255, 0.1);
+}
+
+.menu-dropdown {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  background: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-radius: 6px;
+  list-style: none;
+  padding: 8px 0;
+  margin: 0;
+  width: 120px;
+  z-index: 100;
+}
+
+.menu-dropdown li {
+  padding: 0;
+}
+
+.menu-item {
+  background: transparent;
+  border: none;
+  width: 100%;
+  padding: 8px 16px;
+  text-align: left;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+  transition: background-color 0.15s;
+}
+
+.menu-item:hover {
+  background-color: #f0f0f0;
+}
+
