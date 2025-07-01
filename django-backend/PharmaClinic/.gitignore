@@ -1,0 +1,11 @@
+.venv
+.env
+venv
+__pycache__
+db.sqlite3
+venv/
+env.dev
+celerybeat-schedule
+[ga4]coneccaoapis-7d4a686aa3b3.json
+[gads]coneccaoapis-a3be081d76ea.json
+credencial
