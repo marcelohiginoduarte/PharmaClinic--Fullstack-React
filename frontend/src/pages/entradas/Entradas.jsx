@@ -6,7 +6,7 @@ function Entradas() {
   const [quantidade, setQuantidade] = useState('');
   const [estoque, setEstoque] = useState([]);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (!nome || !quantidade) {
@@ -15,13 +15,36 @@ function Entradas() {
     }
 
     const novoItem = {
-      nome,
-      quantidade: parseInt(quantidade)
+      name_medicine: nome,
+      amount_medicine: parseInt(quantidade)
     };
 
-    setEstoque([...estoque, novoItem]);
-    setNome('');
-    setQuantidade('');
+    try {
+      const response = await fetch('http://127.0.0.1:8000/api/pharmas/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(novoItem)
+      });
+
+      if (!response.ok) {
+        throw new Error('Erro ao cadastrar medicamento');
+      }
+
+      const data = await response.json();
+
+      setEstoque([...estoque, {
+        nome: data.name_medicine,
+        quantidade: data.amount_medicine
+      }]);
+
+      setNome('');
+      setQuantidade('');
+    } catch (error) {
+      console.error('Erro:', error);
+      alert('Erro ao enviar os dados. Verifique o console.');
+    }
   };
 
   return (
